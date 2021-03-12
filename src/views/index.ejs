@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="icon" href="icon/icon4.png">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <h1>Spotify Premium</h1>
+
+    <div class="contenedor">
+        <h2>Canciones</h2>
+    </div>
+
+    <div class="contenedor" id="canciones">
+
+        <% for(let i=0; i<canciones.length; i++){ %>
+
+            <p class="cancion" id="<%= canciones[i] %>" onclick="reproducir(this)" ><%= canciones[i].slice(0, canciones[i].length-4) %></p>
+
+        <% } %>
+
+    </div>
+
+    <div class="controles" id="controles" ></div>
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js" ></script>
+
+</body>
+</html>
